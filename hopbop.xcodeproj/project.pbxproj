@@ -77,9 +77,9 @@
 		DEF6DF5122E9637500F2ED71 = {
 			isa = PBXGroup;
 			children = (
-				DEF6DF5C22E9637500F2ED71 /* hop&bop */,
-				DEF6DF7122E9637600F2ED71 /* hop&bopTests */,
-				DEF6DF7C22E9637600F2ED71 /* hop&bopUITests */,
+				DEF6DF5C22E9637500F2ED71 /* hopbop */,
+				DEF6DF7122E9637600F2ED71 /* hopbopTests */,
+				DEF6DF7C22E9637600F2ED71 /* hopbopUITests */,
 				DEF6DF5B22E9637500F2ED71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +94,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DEF6DF5C22E9637500F2ED71 /* hop&bop */ = {
+		DEF6DF5C22E9637500F2ED71 /* hopbop */ = {
 			isa = PBXGroup;
 			children = (
 				DEF6DF5D22E9637500F2ED71 /* AppDelegate.swift */,
@@ -104,25 +104,25 @@
 				DEF6DF6622E9637500F2ED71 /* LaunchScreen.storyboard */,
 				DEF6DF6922E9637500F2ED71 /* Info.plist */,
 			);
-			path = "hop&bop";
+			path = hopbop;
 			sourceTree = "<group>";
 		};
-		DEF6DF7122E9637600F2ED71 /* hop&bopTests */ = {
+		DEF6DF7122E9637600F2ED71 /* hopbopTests */ = {
 			isa = PBXGroup;
 			children = (
 				DEF6DF7222E9637600F2ED71 /* hop_bopTests.swift */,
 				DEF6DF7422E9637600F2ED71 /* Info.plist */,
 			);
-			path = "hop&bopTests";
+			path = hopbopTests;
 			sourceTree = "<group>";
 		};
-		DEF6DF7C22E9637600F2ED71 /* hop&bopUITests */ = {
+		DEF6DF7C22E9637600F2ED71 /* hopbopUITests */ = {
 			isa = PBXGroup;
 			children = (
 				DEF6DF7D22E9637600F2ED71 /* hop_bopUITests.swift */,
 				DEF6DF7F22E9637600F2ED71 /* Info.plist */,
 			);
-			path = "hop&bopUITests";
+			path = hopbopUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DEF6DF5522E9637500F2ED71 /* Build configuration list for PBXProject "hop&bop" */;
+			buildConfigurationList = DEF6DF5522E9637500F2ED71 /* Build configuration list for PBXProject "hopbop" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -549,7 +549,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DEF6DF5522E9637500F2ED71 /* Build configuration list for PBXProject "hop&bop" */ = {
+		DEF6DF5522E9637500F2ED71 /* Build configuration list for PBXProject "hopbop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DEF6DF8022E9637600F2ED71 /* Debug */,
