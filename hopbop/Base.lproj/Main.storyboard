@@ -40,7 +40,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="coU-Jl-GBe" kind="presentation" id="eC3-F1-UAC"/>
+                                    <segue destination="coU-Jl-GBe" kind="presentation" identifier="loginToMain" id="TEb-12-XSd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,7 +55,7 @@
         <!--Title-->
         <scene sceneID="qnA-jj-uHz">
             <objects>
-                <viewController id="coU-Jl-GBe" customClass="ViewController" customModule="hop_bop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="coU-Jl-GBe" customClass="MapViewController" customModule="hop_bop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tWe-fw-Hm7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,8 +103,9 @@
                                 <rect key="frame" x="0.0" y="44" width="139" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Log Out"/>
                                 <connections>
+                                    <action selector="logOutPressed:" destination="coU-Jl-GBe" eventType="touchUpInside" id="6sF-Pw-AIt"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="Ixq-7d-RHd"/>
                                 </connections>
                             </button>
@@ -225,7 +226,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eC3-F1-UAC"/>
+        <segue reference="TEb-12-XSd"/>
         <segue reference="Ixq-7d-RHd"/>
     </inferredMetricsTieBreakers>
 </document>

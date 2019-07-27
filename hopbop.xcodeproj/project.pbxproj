@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16D184D2BFA9BB3126DF717A /* Pods_hop_bopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C237D12C3B481E5A38853E /* Pods_hop_bopUITests.framework */; };
 		444E507022EC14D7000C2A76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444E506F22EC14D7000C2A76 /* LoginViewController.swift */; };
+		44A820A622EC2B4400207845 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A820A522EC2B4400207845 /* MapViewController.swift */; };
 		A6605749BAF567908D3701ED /* Pods_hop_bopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA3642966D71838D3A22675 /* Pods_hop_bopTests.framework */; };
 		BE30DE03A731DEFF132A7F21 /* Pods_hop_bop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0842B454DF0F67EE190224 /* Pods_hop_bop.framework */; };
 		DED07FB222E98CAE00AC6FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF6DF6422E9637500F2ED71 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		0B18C33C2FE7163485E5F585 /* Pods-hop&bopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hop&bopUITests.release.xcconfig"; path = "Target Support Files/Pods-hop&bopUITests/Pods-hop&bopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0BD1BCC33E8C071948640954 /* Pods-hop&bop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hop&bop.debug.xcconfig"; path = "Target Support Files/Pods-hop&bop/Pods-hop&bop.debug.xcconfig"; sourceTree = "<group>"; };
 		444E506F22EC14D7000C2A76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		44A820A522EC2B4400207845 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		54E907763CEC8668C172F014 /* Pods-hop&bopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hop&bopTests.release.xcconfig"; path = "Target Support Files/Pods-hop&bopTests/Pods-hop&bopTests.release.xcconfig"; sourceTree = "<group>"; };
 		9CA3642966D71838D3A22675 /* Pods_hop_bopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hop_bopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D36D7E537F42DA78961F8B /* Pods-hop&bopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hop&bopUITests.debug.xcconfig"; path = "Target Support Files/Pods-hop&bopUITests/Pods-hop&bopUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				DEF6DF5D22E9637500F2ED71 /* AppDelegate.swift */,
 				DEF6DF5F22E9637500F2ED71 /* ViewController.swift */,
 				444E506F22EC14D7000C2A76 /* LoginViewController.swift */,
+				44A820A522EC2B4400207845 /* MapViewController.swift */,
 				DEF6DF6122E9637500F2ED71 /* Main.storyboard */,
 				DEF6DF6422E9637500F2ED71 /* Assets.xcassets */,
 				DEF6DF6622E9637500F2ED71 /* LaunchScreen.storyboard */,
@@ -396,6 +399,7 @@
 				444E507022EC14D7000C2A76 /* LoginViewController.swift in Sources */,
 				DEF6DF6022E9637500F2ED71 /* ViewController.swift in Sources */,
 				DEF6DF5E22E9637500F2ED71 /* AppDelegate.swift in Sources */,
+				44A820A622EC2B4400207845 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
