@@ -8,16 +8,20 @@
 
 import UIKit
 import FBSDKLoginKit
+import GoogleSignIn
 
-class LoginViewController: UIViewController, LoginButtonDelegate{
+class LoginViewController: UIViewController, LoginButtonDelegate, GIDSignInUIDelegate, GIDSignInDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
         
         // Check if a user is already logged in.
-        if let accessToken = AccessToken.current {
+        GIDSignIn.sharedInstance().signInSilently() // Google
+        if let accessToken = AccessToken.current {  // FB
             // A user is already logged in.
             print("User \(accessToken.userID) is logged in!")
             DispatchQueue.main.async(){
@@ -25,9 +29,36 @@ class LoginViewController: UIViewController, LoginButtonDelegate{
             }
         }
         
-        let fbLoginButton = FBLoginButton(type: .roundedRect)
-        fbLoginButton.center = view.center
+        let googleLoginButton = GIDSignInButton()
+        googleLoginButton.center = view.center
+        view.addSubview(googleLoginButton)
+        
+        let fbLoginButton = FBLoginButton()
+        fbLoginButton.center = CGPoint(x: view.center.x, y: view.center.y + 50)
+        fbLoginButton.delegate = self
         view.addSubview(fbLoginButton)
+        
+    }
+    
+    // Google GIDSignInDelegate Methods
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            DispatchQueue.main.async(){
+                self.performSegue(withIdentifier: "loginToMain", sender: nil)
+            }
+            
+            // Perform any operations on signed in user here.
+            let userId = user.userID                  // For client-side use only!
+            let idToken = user.authentication.idToken // Safe to send to the server
+            /*let fullName = user.profile.name
+             let givenName = user.profile.givenName
+             let familyName = user.profile.familyName
+             let email = user.profile.email
+             */
+        }
     }
     
     // FB LoginButtonDelegate Methods

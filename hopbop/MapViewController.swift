@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import GoogleSignIn
 
 class MapViewController: UIViewController {
     let logOutManager = LoginManager()
@@ -20,6 +21,7 @@ class MapViewController: UIViewController {
     
     @IBAction func logOutPressed(_ sender: Any) {
         logOutManager.logOut()
+        GIDSignIn.sharedInstance().signOut()
     }
     
     /*
