@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 
-class LoginViewController: UINavigationController {
+class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class LoginViewController: UINavigationController {
         // Do any additional setup after loading the view.
         let fbLoginButton = FBLoginButton(type: .roundedRect)
         fbLoginButton.center = view.center
-        //self.view.addSubview(fbLoginButton)
+        view.addSubview(fbLoginButton)
     }
     
 

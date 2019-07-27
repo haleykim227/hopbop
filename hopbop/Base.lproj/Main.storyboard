@@ -18,15 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdI-Da-KlO">
-                                <rect key="frame" x="118" y="379" width="139" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="coU-Jl-GBe" kind="presentation" id="eC3-F1-UAC"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-qM-D1Q">
                                 <rect key="frame" x="50" y="58" width="275" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,6 +32,15 @@
                                 <state key="normal" title="?"/>
                                 <connections>
                                     <segue destination="PHT-cx-X6W" kind="presentation" id="k0i-0b-zCE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdI-Da-KlO">
+                                <rect key="frame" x="118" y="600" width="139" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="coU-Jl-GBe" kind="presentation" id="eC3-F1-UAC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -226,6 +226,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="eC3-F1-UAC"/>
-        <segue reference="9IO-i8-gqF"/>
+        <segue reference="Ixq-7d-RHd"/>
     </inferredMetricsTieBreakers>
 </document>
