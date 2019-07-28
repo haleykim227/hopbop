@@ -9,11 +9,13 @@
 import UIKit
 import FBSDKCoreKit
 import GoogleSignIn
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let googleClientID: String = "1071757962127-0t0alnu7kc1o315mpml6n7b3j37q5q40.apps.googleusercontent.com"
+    let googleAPIKey: String = "AIzaSyBAhV4pwy6d_oiKLG-R6WUh1ckrWHYctIc"
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -23,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Google: initialize sign-in
         GIDSignIn.sharedInstance().clientID = googleClientID
         
+        // GoogleMaps initialization
+        GMSServices.provideAPIKey(googleAPIKey)
         
         // TODO: If user is logged in, immediately go to mapViewController.
         
