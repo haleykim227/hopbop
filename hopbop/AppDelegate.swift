@@ -15,30 +15,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let googleClientID: String = "1071757962127-0t0alnu7kc1o315mpml6n7b3j37q5q40.apps.googleusercontent.com"
     var window: UIWindow?
-    
-    /*
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            print("\(error.localizedDescription)")
-        } else {
-            // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            /*let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
-            */
-        }
-    }
-    */
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // FB Login
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         // Google: initialize sign-in
         GIDSignIn.sharedInstance().clientID = googleClientID
-        //GIDSignIn.sharedInstance().delegate = self
+        
+        
+        // TODO: If user is logged in, immediately go to mapViewController.
+        
+        /*
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = UIColor.white
+        
+        if let accessToken = AccessToken.current {  // FB
+            // A user is already logged in.
+            print("User \(accessToken.userID) is logged in!")
+            let mapViewController = MapViewController()
+            self.window?.rootViewController = mapViewController
+        }
+        else {
+            let loginViewController = LoginViewController()
+            self.window?.rootViewController = loginViewController
+        }
+        */
         return true
     }
     

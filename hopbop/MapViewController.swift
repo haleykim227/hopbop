@@ -14,8 +14,14 @@ class MapViewController: UIViewController {
     let logOutManager = LoginManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let fbUser = AccessToken.current {
+            print("FB User: \(fbUser.userID)")
+        }
         
-
+        if let googleUser = GIDSignIn.sharedInstance()?.currentUser {
+            print("Google User: \(googleUser.authentication.accessToken!)")
+        }
+        
         // Do any additional setup after loading the view.
     }
     
