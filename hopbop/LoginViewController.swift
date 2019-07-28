@@ -19,16 +19,6 @@ class LoginViewController: UIViewController, LoginButtonDelegate, GIDSignInUIDel
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
         
-        // Check if a user is already logged in.
-        GIDSignIn.sharedInstance().signInSilently() // Google
-        if let accessToken = AccessToken.current {  // FB
-            // A user is already logged in.
-            print("User \(accessToken.userID) is logged in!")
-            DispatchQueue.main.async(){
-                self.performSegue(withIdentifier: "loginToMain", sender: nil)
-            }
-        }
-        
         let googleLoginButton = GIDSignInButton()
         googleLoginButton.center = view.center
         view.addSubview(googleLoginButton)

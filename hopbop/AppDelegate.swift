@@ -28,23 +28,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // GoogleMaps initialization
         GMSServices.provideAPIKey(googleAPIKey)
         
-        // TODO: If user is logged in, immediately go to mapViewController.
         
-        /*
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.backgroundColor = UIColor.white
-        
-        if let accessToken = AccessToken.current {  // FB
+        // If user is logged in, immediately go to mapViewController.
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if (AccessToken.current != nil) || GIDSignIn.sharedInstance().hasAuthInKeychain() {
             // A user is already logged in.
-            print("User \(accessToken.userID) is logged in!")
-            let mapViewController = MapViewController()
-            self.window?.rootViewController = mapViewController
+            let mapViewController = storyboard.instantiateViewController(withIdentifier: "mapViewController")
+            window?.rootViewController = mapViewController
         }
         else {
-            let loginViewController = LoginViewController()
-            self.window?.rootViewController = loginViewController
+            let loginViewController = storyboard.instantiateViewController(withIdentifier: "loginViewController")
+            window?.rootViewController = loginViewController
         }
-        */
+        
         return true
     }
     
