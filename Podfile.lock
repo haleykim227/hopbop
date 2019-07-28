@@ -1,0 +1,54 @@
+PODS:
+  - FBSDKCoreKit (5.2.0):
+    - FBSDKCoreKit/Basics (= 5.2.0)
+    - FBSDKCoreKit/Core (= 5.2.0)
+  - FBSDKCoreKit/Basics (5.2.0)
+  - FBSDKCoreKit/Core (5.2.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.2.0):
+    - FBSDKCoreKit (~> 5.0)
+  - GoogleMaps (3.1.0):
+    - GoogleMaps/Maps (= 3.1.0)
+  - GoogleMaps/Base (3.1.0)
+  - GoogleMaps/Maps (3.1.0):
+    - GoogleMaps/Base
+  - GoogleSignIn (4.4.0):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.2.1):
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - GoogleToolboxForMac/Defines (2.2.1)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.1)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.1)
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.1)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.1)"
+  - GTMSessionFetcher/Core (1.2.2)
+
+DEPENDENCIES:
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - GoogleMaps
+  - GoogleSignIn
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - GoogleMaps
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+
+SPEC CHECKSUMS:
+  FBSDKCoreKit: fd37d65447ef93255191dd5ded4f63955d23f8aa
+  FBSDKLoginKit: b814ebf853e7b28592eab4d24b458a89b3f8d69e
+  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
+  GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
+  GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
+  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+
+PODFILE CHECKSUM: 400a99cc4dd4120c3566a41bae2787077a3e9ae4
+
+COCOAPODS: 1.7.5
