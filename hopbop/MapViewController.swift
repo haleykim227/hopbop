@@ -18,7 +18,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     // GoogleMaps stuff
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
-    //var mapView: GMSMapView!
     var zoomLevel: Float = 15.0
     
     @IBOutlet weak var googleMapsView: GMSMapView!
@@ -45,12 +44,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         // Creates default map view of Sydney, Australia.
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        //mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        //mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         // Sets the map as the view, hide it until we've got a location update.
-        //view = mapView
         googleMapsView.isHidden = true
+        
+        
+        // TODO: Create markers for all parties that are tonight and the end time hasn't passed yet. Database request!
+        // Test add a GMS marker
+        let marker = Marker(id: "12345")
+        marker.map = googleMapsView
+        
     }
     
     // Logs out.
