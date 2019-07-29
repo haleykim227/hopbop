@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import GoogleMaps
 
-class Marker: GMSMarker {
+class EventMarker: GMSMarker {
     let eventID: String
     //let eventName: String
     let startTime: Date    // Not sure if this should be of type Date
