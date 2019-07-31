@@ -25,22 +25,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxo-kl-5F4">
-                                <rect key="frame" x="159" y="704" width="57" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="?"/>
-                                <connections>
-                                    <segue destination="PHT-cx-X6W" kind="presentation" id="k0i-0b-zCE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdI-Da-KlO">
                                 <rect key="frame" x="118" y="600" width="139" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="coU-Jl-GBe" kind="presentation" identifier="loginToMain" id="TEb-12-XSd"/>
+                                    <segue destination="6oo-AT-FPY" kind="presentation" identifier="loginToMain" id="XMV-Xu-Q77"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,41 +55,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFB-Ow-1O8">
-                                <rect key="frame" x="220" y="736" width="139" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="wfq-g5-aXc" kind="presentation" id="QSk-vp-jwJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTl-TU-32g">
-                                <rect key="frame" x="16" y="736" width="139" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Rank"/>
-                                <connections>
-                                    <segue destination="1bG-EV-EQB" kind="presentation" id="4uB-rR-qhN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uys-rX-EcA">
-                                <rect key="frame" x="0.0" y="44" width="139" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <action selector="logOutPressed:" destination="coU-Jl-GBe" eventType="touchUpInside" id="6sF-Pw-AIt"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Ixq-7d-RHd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSa-rO-gNN">
-                                <rect key="frame" x="220" y="673" width="139" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Loc."/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -109,16 +65,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jrN-1s-NSK"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="uR1-U3-GQA"/>
                     <navigationItem key="navigationItem" title="Title" id="i3v-hP-xVq"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="googleMapsView" destination="eyJ-Tb-CTD" id="aXz-zf-Qbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVQ-FQ-vMk" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936" y="130"/>
+            <point key="canvasLocation" x="-702" y="872"/>
         </scene>
-        <!--View Controller-->
+        <!--About-->
         <scene sceneID="iuA-Nr-iy2">
             <objects>
                 <viewController id="PHT-cx-X6W" customClass="ViewController" customModule="hop_bop" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,15 +84,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgC-Zh-PpH">
-                                <rect key="frame" x="0.0" y="44" width="139" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="9IO-i8-gqF"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZZ-Kf-JGw">
                                 <rect key="frame" x="50" y="90" width="275" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,12 +95,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Qhe-ei-YW2"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="About" id="qqz-DQ-fca"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEv-Xr-udN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="843.75"/>
+            <point key="canvasLocation" x="2686" y="872"/>
         </scene>
-        <!--View Controller-->
+        <!--Ranking-->
         <scene sceneID="0q8-lZ-Bep">
             <objects>
                 <viewController id="1bG-EV-EQB" customClass="ViewController" customModule="hop_bop" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,15 +110,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6t-sj-shg">
-                                <rect key="frame" x="0.0" y="44" width="139" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="coU-Jl-GBe" kind="presentation" id="6di-ed-8VL"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ranking Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ov-Ev-4az">
                                 <rect key="frame" x="50" y="90" width="275" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -179,12 +121,61 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="M8o-C2-1NJ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Ranking" id="HP1-4K-37d"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNg-uo-rX9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="844"/>
+            <point key="canvasLocation" x="137" y="872"/>
         </scene>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="iMS-jk-Pwg">
+            <objects>
+                <tabBarController storyboardIdentifier="mainTabBarController" id="6oo-AT-FPY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9FY-Jg-U2x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="coU-Jl-GBe" kind="relationship" relationship="viewControllers" id="Iuk-Gv-suE"/>
+                        <segue destination="1bG-EV-EQB" kind="relationship" relationship="viewControllers" id="9Hv-mk-iqa"/>
+                        <segue destination="laK-aD-VMe" kind="relationship" relationship="viewControllers" id="Vtn-dS-AZB"/>
+                        <segue destination="wfq-g5-aXc" kind="relationship" relationship="viewControllers" id="YDX-43-RER"/>
+                        <segue destination="PHT-cx-X6W" kind="relationship" relationship="viewControllers" id="0p3-jv-adX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JSx-o2-iN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966" y="129"/>
+        </scene>
+        <!--Event-->
+        <scene sceneID="Hm8-H4-xbQ">
+            <objects>
+                <viewController id="laK-aD-VMe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bcp-fn-1i8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post an Event Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebC-XZ-9bD">
+                                <rect key="frame" x="41" y="98" width="293" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uSf-eY-YJX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Event" id="L1P-RB-JQf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Koo-LU-yai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.60000000000002" y="871.92118226600985"/>
+        </scene>
+        <!--Settings-->
         <scene sceneID="9NV-Nw-WMi">
             <objects>
                 <viewController id="wfq-g5-aXc" customClass="ViewController" customModule="hop_bop" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,15 +183,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5t-ua-lGE">
-                                <rect key="frame" x="0.0" y="44" width="139" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="coU-Jl-GBe" kind="presentation" id="GgT-Tf-p5S"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings/Profile Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jx3-79-8aZ">
                                 <rect key="frame" x="50" y="94" width="275" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -208,18 +190,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofj-yn-PTr">
+                                <rect key="frame" x="109" y="141" width="156" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logOutPressed:" destination="wfq-g5-aXc" eventType="touchUpInside" id="ndV-0r-uFZ"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="JS2-tI-FAV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Y5h-ov-gTx"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="26f-ZP-ZFf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g97-KR-OfZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="130"/>
+            <point key="canvasLocation" x="1806" y="872"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6di-ed-8VL"/>
-        <segue reference="Ixq-7d-RHd"/>
+        <segue reference="JS2-tI-FAV"/>
     </inferredMetricsTieBreakers>
 </document>

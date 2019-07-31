@@ -59,12 +59,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    // Logs out.
-    @IBAction func logOutPressed(_ sender: Any) {
-        logOutManager.logOut()
-        GIDSignIn.sharedInstance().signOut()
-    }
-    
     // CLLocationManagerDelegate Methods
     
     // Handle incoming location events.

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import GoogleSignIn
 
 class ViewController: UIViewController {
 
@@ -15,6 +17,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func logOutPressed(_ sender: Any) {
+        let logOutManager = LoginManager()
+        logOutManager.logOut()
+        GIDSignIn.sharedInstance().signOut()
+    }
+    
 }
 

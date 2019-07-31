@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         if (AccessToken.current != nil) || GIDSignIn.sharedInstance().hasAuthInKeychain() {
             // A user is already logged in.
-            let mapViewController = storyboard.instantiateViewController(withIdentifier: "mapViewController")
-            window?.rootViewController = mapViewController
+            let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "mainTabBarController")
+            window?.rootViewController = mainTabBarController
         }
         else {
             let loginViewController = storyboard.instantiateViewController(withIdentifier: "loginViewController")
