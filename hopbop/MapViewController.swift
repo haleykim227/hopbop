@@ -48,11 +48,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // Sets the map as the view, hide it until we've got a location update.
         googleMapsView.isHidden = true
         
-        
         // TODO: Create markers for all parties that are tonight and the end time hasn't passed yet. Database request!
         // Test add a GMS marker
-        let databaseHandler = DatabaseHandler()
-        let markers = databaseHandler.getMarkersForTonight()
+        let markers = DatabaseHandler.getMarkersForTonight()
         for marker in markers {
             marker.map = googleMapsView
         }

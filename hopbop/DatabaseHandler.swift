@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DatabaseHandler{
+class DatabaseHandler {
     
     // USER
     
