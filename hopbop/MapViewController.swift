@@ -51,8 +51,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         // TODO: Create markers for all parties that are tonight and the end time hasn't passed yet. Database request!
         // Test add a GMS marker
-        let marker = EventMarker(id: "12345")
-        marker.map = googleMapsView
+        let databaseHandler = DatabaseHandler()
+        let markers = databaseHandler.getMarkersForTonight()
+        for marker in markers {
+            marker.map = googleMapsView
+        }
         
     }
     
