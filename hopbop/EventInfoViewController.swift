@@ -13,6 +13,11 @@ class EventInfoViewController: UIViewController {
     @IBOutlet weak var eventNameLabel: UILabel!
     var eventID: String?
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
