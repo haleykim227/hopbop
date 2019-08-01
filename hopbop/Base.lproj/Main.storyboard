@@ -78,7 +78,7 @@
         <!--Map-->
         <scene sceneID="4wA-G6-byv">
             <objects>
-                <navigationController id="S8u-TT-Kgg" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MapNC" id="S8u-TT-Kgg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="J6A-pe-lqg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vz8-v9-XhI">
