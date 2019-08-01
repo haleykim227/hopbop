@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
-        <!--Title-->
+        <!--Map View Controller-->
         <scene sceneID="qnA-jj-uHz">
             <objects>
                 <viewController storyboardIdentifier="mapViewController" id="coU-Jl-GBe" customClass="MapViewController" customModule="hop_bop" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,8 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jrN-1s-NSK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="uR1-U3-GQA"/>
-                    <navigationItem key="navigationItem" title="Title" id="i3v-hP-xVq"/>
+                    <navigationItem key="navigationItem" id="i3v-hP-xVq"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="googleMapsView" destination="eyJ-Tb-CTD" id="aXz-zf-Qbv"/>
@@ -75,6 +74,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVQ-FQ-vMk" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-702" y="872"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="4wA-G6-byv">
+            <objects>
+                <navigationController id="S8u-TT-Kgg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="J6A-pe-lqg"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vz8-v9-XhI">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="coU-Jl-GBe" kind="relationship" relationship="rootViewController" id="aix-pJ-4w1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OsH-yO-EnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1588" y="872"/>
+        </scene>
+        <!--Event Info View Controller-->
+        <scene sceneID="MOe-0Y-dhU">
+            <objects>
+                <viewController storyboardIdentifier="eventInfoVC" id="pnE-Nk-90k" customClass="EventInfoViewController" customModule="hop_bop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eNW-hJ-zFU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Info Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Diu-X0-1cE">
+                                <rect key="frame" x="98" y="112" width="179" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsy-Wz-jDu">
+                                <rect key="frame" x="117" y="171" width="141" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="r9R-9j-qOV"/>
+                    </view>
+                    <connections>
+                        <outlet property="eventNameLabel" destination="bsy-Wz-jDu" id="4Zs-qU-Z9c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2y-Z3-x4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703" y="1578"/>
         </scene>
         <!--About-->
         <scene sceneID="iuA-Nr-iy2">
@@ -138,11 +189,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="coU-Jl-GBe" kind="relationship" relationship="viewControllers" id="Iuk-Gv-suE"/>
-                        <segue destination="1bG-EV-EQB" kind="relationship" relationship="viewControllers" id="9Hv-mk-iqa"/>
-                        <segue destination="laK-aD-VMe" kind="relationship" relationship="viewControllers" id="Vtn-dS-AZB"/>
-                        <segue destination="wfq-g5-aXc" kind="relationship" relationship="viewControllers" id="YDX-43-RER"/>
-                        <segue destination="PHT-cx-X6W" kind="relationship" relationship="viewControllers" id="0p3-jv-adX"/>
+                        <segue destination="S8u-TT-Kgg" kind="relationship" relationship="viewControllers" id="wAV-7q-3vq"/>
+                        <segue destination="1bG-EV-EQB" kind="relationship" relationship="viewControllers" id="iqH-PF-PFc"/>
+                        <segue destination="laK-aD-VMe" kind="relationship" relationship="viewControllers" id="Xib-z2-gTE"/>
+                        <segue destination="wfq-g5-aXc" kind="relationship" relationship="viewControllers" id="z8d-bm-4PF"/>
+                        <segue destination="PHT-cx-X6W" kind="relationship" relationship="viewControllers" id="Ye7-oi-XF1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSx-o2-iN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,6 +264,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JS2-tI-FAV"/>
+        <segue reference="z8d-bm-4PF"/>
     </inferredMetricsTieBreakers>
 </document>

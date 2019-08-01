@@ -11,7 +11,7 @@ import FBSDKLoginKit
 import GoogleSignIn
 import GoogleMaps
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     // FB LoginManager
     let logOutManager = LoginManager()
     
@@ -22,8 +22,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var googleMapsView: GMSMapView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //navigationController?.setNavigationBarHidden(true, animated: true)
+        //tabBarController?.tabBar.isHidden = false
+        
         // Checks if FB user is logged in.
         if let fbUser = AccessToken.current {
             print("FB User: \(fbUser.userID)")
@@ -46,6 +54,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
         
         // Sets the map as the view, hide it until we've got a location update.
+        googleMapsView.delegate = self
         googleMapsView.isHidden = true
         
         // TODO: Create markers for all parties that are tonight and the end time hasn't passed yet. Database request!
@@ -55,6 +64,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             marker.map = googleMapsView
         }
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     // CLLocationManagerDelegate Methods
@@ -101,6 +115,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         print("Error: \(error)")
     }
     
+    // GMSMapView Delegate Methods
+    // If marker info is tapped, opens new view controller with rankings of event marker represents.
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let eventInfoVC = storyboard.instantiateViewController(withIdentifier: "eventInfoVC")
+        (eventInfoVC as! EventInfoViewController).eventID = (marker as! EventMarker).eventID
+        //tabBarController?.tabBar.isHidden = true
+        navigationController?.pushViewController(eventInfoVC, animated: true)
+    }
     /*
     // MARK: - Navigation
 
