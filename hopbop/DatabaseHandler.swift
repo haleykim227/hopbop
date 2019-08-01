@@ -55,8 +55,13 @@ class DatabaseHandler {
     }
     
     // Returns array of event ID's in order of their ranking.
-    static func getEventIDsByRanking() -> [String]{
+    static func getEventIDsByRanking() -> [String] {
         return []
+    }
+    
+    // Returns number of events tonight.
+    static func getNumEvents() -> Int {
+        return 1
     }
     
     // Searches for an event by term, and returns the event.

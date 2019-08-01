@@ -121,7 +121,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let eventInfoVC = storyboard.instantiateViewController(withIdentifier: "eventInfoVC")
         (eventInfoVC as! EventInfoViewController).eventID = (marker as! EventMarker).eventID
-        //tabBarController?.tabBar.isHidden = true
         navigationController?.pushViewController(eventInfoVC, animated: true)
     }
     /*
