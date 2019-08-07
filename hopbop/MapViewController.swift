@@ -114,8 +114,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     // If marker info is tapped, opens new view controller with rankings of event marker represents.
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let eventInfoVC = storyboard.instantiateViewController(withIdentifier: "eventInfoVC")
-        (eventInfoVC as! EventInfoViewController).eventID = (marker as! EventMarker).eventID
+        guard let eventInfoVC = storyboard.instantiateViewController(withIdentifier: "eventInfoVC") as? EventInfoViewController else {
+            print("'eventInfoVC' cannot be casted as EventInfoViewController")
+            return
+        }
+        guard let evMarker = marker as? EventMarker else {
+            print("Marker selected is not of class EventMarker")
+            return
+        }
+        eventInfoVC.eventID = evMarker.eventID
         navigationController?.pushViewController(eventInfoVC, animated: true)
     }
     /*

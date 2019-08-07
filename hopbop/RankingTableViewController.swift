@@ -35,7 +35,9 @@ class RankingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // TODO: Get array of event ID's in ranking order from DatabaseHandler
         // Loop through array to create cell for each event.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventRankingCell", for: indexPath) as! EventRankingCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventRankingCell", for: indexPath) as? EventRankingCell else {
+            fatalError("Cell is not of class EventRankingCell")
+        }
         cell.eventID = "12345"
         cell.eventIDLabel.text = "12345"
 
@@ -45,8 +47,14 @@ class RankingTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let eventInfoVC = storyboard.instantiateViewController(withIdentifier: "eventInfoVC") as! EventInfoViewController
-        let cell = self.tableView(tableView, cellForRowAt: indexPath) as! EventRankingCell
+        guard let eventInfoVC = storyboard.instantiateViewController(withIdentifier: "eventInfoVC") as? EventInfoViewController else {
+            print("'eventInfoVC' cannot be casted as EventInfoViewController")
+            return
+        }
+        guard let cell = self.tableView(tableView, cellForRowAt: indexPath) as? EventRankingCell else {
+            print("Cell selected is not of class EventRankingCell")
+            return
+        }
         eventInfoVC.eventID = cell.eventID
         navigationController?.pushViewController(eventInfoVC, animated: true)
     }
