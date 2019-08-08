@@ -18,8 +18,8 @@ class DatabaseHandler {
     }
     
     // Returns current user's info.
-    static func getUserInfo(userID: String, platform: String) {
-        
+    static func getUserInfo(userID: String, platform: String) -> User{
+        return User()
     }
     
     // Updates user info in user table.
@@ -67,13 +67,13 @@ class DatabaseHandler {
     }
     
     // Searches for an event by term, and returns the event.
-    static func searchForEventByTerm(term: String) {
-        
+    static func searchForEventByTerm(term: String) -> Event {
+        return Event()
     }
     
     // Returns ratings for event with the eventID.
-    static func getRatingsForEvent(eventID: String) {
-        
+    static func getRatingsForEvent(eventID: String) -> [String] {
+        return []
     }
     
     // Returns array of markers for all events tonight.
@@ -84,13 +84,13 @@ class DatabaseHandler {
     // RATING
     
     // Returns rating with associated rating ID.
-    static func getRatingByID(ratingID: String) {
-        
+    static func getRatingByID(ratingID: String) -> Rating {
+        return Rating()
     }
     
     // Returns rating for the current user.
-    static func getRatingForUser(userID: String, platform: String) {
-        
+    static func getRatingForUser(userID: String, platform: String) -> Rating {
+        return Rating()
     }
     
     
