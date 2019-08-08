@@ -16,6 +16,8 @@
 		44B9399922F28A3E0098BF7D /* EventInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B9399822F28A3E0098BF7D /* EventInfoViewController.swift */; };
 		44D4A37A22F372BB00AD9C2D /* RankingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D4A37922F372BB00AD9C2D /* RankingTableViewController.swift */; };
 		44F1C4DE22EF9C29007A7CA6 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F1C4DD22EF9C28007A7CA6 /* DatabaseHandler.swift */; };
+		44FD257B22FBDCC70044A619 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD257A22FBDCC70044A619 /* User.swift */; };
+		44FD257D22FBDD270044A619 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD257C22FBDD270044A619 /* Rating.swift */; };
 		A6605749BAF567908D3701ED /* Pods_hop_bopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA3642966D71838D3A22675 /* Pods_hop_bopTests.framework */; };
 		BE30DE03A731DEFF132A7F21 /* Pods_hop_bop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0842B454DF0F67EE190224 /* Pods_hop_bop.framework */; };
 		DED07FB222E98CAE00AC6FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF6DF6422E9637500F2ED71 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		44B9399822F28A3E0098BF7D /* EventInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoViewController.swift; sourceTree = "<group>"; };
 		44D4A37922F372BB00AD9C2D /* RankingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewController.swift; sourceTree = "<group>"; };
 		44F1C4DD22EF9C28007A7CA6 /* DatabaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
+		44FD257A22FBDCC70044A619 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		44FD257C22FBDD270044A619 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		54E907763CEC8668C172F014 /* Pods-hop&bopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hop&bopTests.release.xcconfig"; path = "Target Support Files/Pods-hop&bopTests/Pods-hop&bopTests.release.xcconfig"; sourceTree = "<group>"; };
 		9CA3642966D71838D3A22675 /* Pods_hop_bopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hop_bopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D36D7E537F42DA78961F8B /* Pods-hop&bopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hop&bopUITests.debug.xcconfig"; path = "Target Support Files/Pods-hop&bopUITests/Pods-hop&bopUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				44687ABE22F376550092892B /* EventRankingCell.swift */,
 				44F1C4DD22EF9C28007A7CA6 /* DatabaseHandler.swift */,
 				44767F9722FBC42A00F5BFAB /* Event.swift */,
+				44FD257A22FBDCC70044A619 /* User.swift */,
+				44FD257C22FBDD270044A619 /* Rating.swift */,
 				44A171DC22EE54FF00DF5D27 /* EventMarker.swift */,
 				DEF6DF6122E9637500F2ED71 /* Main.storyboard */,
 				DEF6DF6422E9637500F2ED71 /* Assets.xcassets */,
@@ -432,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FD257D22FBDD270044A619 /* Rating.swift in Sources */,
 				44D4A37A22F372BB00AD9C2D /* RankingTableViewController.swift in Sources */,
 				444E507022EC14D7000C2A76 /* LoginViewController.swift in Sources */,
 				DEF6DF6022E9637500F2ED71 /* ViewController.swift in Sources */,
@@ -442,6 +449,7 @@
 				44B9399922F28A3E0098BF7D /* EventInfoViewController.swift in Sources */,
 				44A820A622EC2B4400207845 /* MapViewController.swift in Sources */,
 				44A171DD22EE54FF00DF5D27 /* EventMarker.swift in Sources */,
+				44FD257B22FBDCC70044A619 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
