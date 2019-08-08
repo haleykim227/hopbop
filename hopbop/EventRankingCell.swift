@@ -16,6 +16,7 @@ class EventRankingCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //eventIDLabel.text = eventID
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

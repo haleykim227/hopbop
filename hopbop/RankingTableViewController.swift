@@ -10,6 +10,8 @@ import UIKit
 
 class RankingTableViewController: UITableViewController {
     
+    var eventIDsByRanking: [String]?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -17,6 +19,9 @@ class RankingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Get event IDs by their ranking
+        eventIDsByRanking = DatabaseHandler.getEventIDsByRanking()
     }
     
 
@@ -28,7 +33,9 @@ class RankingTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return number of events OR return a max number.
-        return 3
+        let totalNumEvents = DatabaseHandler.getNumEvents()
+        let numRows = totalNumEvents > 30 ? 30 : totalNumEvents
+        return numRows
     }
 
     
@@ -38,8 +45,9 @@ class RankingTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventRankingCell", for: indexPath) as? EventRankingCell else {
             fatalError("Cell is not of class EventRankingCell")
         }
-        cell.eventID = "12345"
-        cell.eventIDLabel.text = "12345"
+        let event = DatabaseHandler.getEventByID(eventID: eventIDsByRanking![indexPath.row])
+        cell.eventID = event.id
+        cell.eventIDLabel.text = event.id
 
         return cell
     }

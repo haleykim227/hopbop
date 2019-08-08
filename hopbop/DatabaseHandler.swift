@@ -40,8 +40,10 @@ class DatabaseHandler {
     // EVENT
     
     // Returns event info by event ID.
-    static func getEventByID(eventID: String) {
-        
+    static func getEventByID(eventID: String) -> Event {
+        let event = Event()
+        event.id = eventID
+        return event
     }
     
     // Add new event.
@@ -56,7 +58,7 @@ class DatabaseHandler {
     
     // Returns array of event ID's in order of their ranking.
     static func getEventIDsByRanking() -> [String] {
-        return []
+        return ["12345"]
     }
     
     // Returns number of events tonight.
